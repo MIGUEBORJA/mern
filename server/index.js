@@ -1,6 +1,5 @@
-const express = require("express");
-const app = express(); 
+import app from "./app.js";
+import { connectDB } from "./db.js";
 
-app.listen(3001,()=>{
-    console.log("Corriendo en el puerto 3001")
-})
+connectDB(); 
+app.listen(5000, ()=> console.log('server on port 5000')); 
